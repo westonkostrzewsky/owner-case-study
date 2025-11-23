@@ -3,7 +3,6 @@
 File: online_ordering_metrics.sql
 Purpose: Calculates CAC, LTV, and CAC:LTV ratio for leads segmented by online ordering platform
 Author: Weston Kostrzewsky
-Date: 2025-11-22
 ============================================================
 
 Description:
