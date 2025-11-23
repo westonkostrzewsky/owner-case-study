@@ -3,7 +3,6 @@
 File: marketplace_metrics.sql
 Purpose: Calculates CAC, LTV, and CAC:LTV ratio for leads segmented by marketplace
 Author: Weston Kostrzewsky
-Date: 2025-11-22
 ============================================================
 
 Description:
