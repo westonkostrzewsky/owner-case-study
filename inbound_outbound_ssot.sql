@@ -1,4 +1,23 @@
--- normalize expense tables
+/*
+============================================================
+File: inbound_outbound_ssot.sql
+Purpose: Calculates CAC, LTV, and CAC:LTV ratio for inbound vs outbound leads
+Author: Weston Kostrzewsky
+============================================================
+
+Description:
+- Computes CAC, LTV, and LTV:CAC ratio by lead channel (inbound/outbound)
+- Helps identify which channel is more efficient in generating revenue
+
+Inputs:
+- demo_db.gtm_case.leads
+- demo_db.gtm_case.expenses_advertising
+- demo_db.gtm_case.expenses_salary_and_commissions
+
+Outputs:
+- month, lead_channel, total leads, conversions, allocated cost, CAC, LTV, CAC:LTV ratio
+*/
+
 -- convert cost/salary fields to numbers, removing characters and non-breaking spaces
 -- convert month fields to dates
 with cleaned_advertising as (
@@ -16,7 +35,6 @@ cleaned_salary as (
     from demo_db.gtm_case.expenses_salary_and_commissions
 ),
 
--- leads
 normalized_leads as (
     select
         lead_id
