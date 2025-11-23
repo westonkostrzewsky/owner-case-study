@@ -1,3 +1,25 @@
+/*
+============================================================
+File: cuisine_metrics.sql
+Purpose: Calculates CAC, LTV, and CAC:LTV ratio for leads segmented by cuisine type
+Author: Weston Kostrzewsky
+============================================================
+
+Description:
+- Segments leads by cuisine type and lead channel
+- Computes total leads, conversions, predicted sales, CAC, LTV, and CAC:LTV ratio
+- Rounds financial metrics to 2 decimal places
+- Filters out null/empty cuisine values
+
+Inputs:
+- demo_db.gtm_case.leads
+- demo_db.gtm_case.expenses_advertising
+- demo_db.gtm_case.expenses_salary_and_commissions
+
+Outputs:
+- lead_channel, cuisine, total leads, conversions, avg LTV, CAC, LTV:CAC ratio
+*/
+
 with lead_cuisines as (
     select
         lead_id
