@@ -52,5 +52,5 @@ This repository contains SQL queries for analyzing GTM leads and calculating LTV
 - Explore **funnel stage conversion rates** to identify bottlenecks.
 - Break down step-by-step conversion rates: form submission → first contact → demo booked → opportunity → close won.
 - Calculate time to conversion and see which segments convert faster.
-
+- Add fields to measure customer tenure (`start_date` and `end_date`), allowing for churn calculations and incorporation of $500 monthly subscription fee into LTV calculations
 ---
